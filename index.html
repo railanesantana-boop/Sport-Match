@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport Match - Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="app-container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo">
+                <img src="../assets/logo.jpeg" alt="Logosportmatch" style="height: 40px; width: auto;"> 
+                <span>SPORT MATCH</span>
+            </a>
+        </div>
+        
+        <div class="sidebar-profile" id="sidebarProfile">
+            <div class="sidebar-avatar" id="sidebarAvatar">👤</div>
+            <h3 id="sidebarNome">Carregando...</h3>
+            <p id="sidebarEmail">...</p>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item active">
+                <span class="nav-icon">📊</span> Dashboard
+            </a>
+            <a href="atletas.html" class="nav-item">
+                <span class="nav-icon">👥</span> Atletas
+            </a>
+            <a href="equipes.html" class="nav-item">
+                <span class="nav-icon">🏢</span> Equipes
+            </a>
+            <a href="vagas.html" class="nav-item">
+                <span class="nav-icon">📋</span> Vagas
+            </a>
+            <a href="perfil_atleta.html" class="nav-item" id="perfilLink">
+                <span class="nav-icon">✏️</span> Meu Perfil
+            </a>
+            <a href="#" class="nav-item logout" onclick="logout(); return false;">
+                <span class="nav-icon">🚪</span> Sair
+            </a>
+        </nav>
+        
+        <div class="sidebar-notifications">
+            <div class="notification-badge-sidebar" onclick="toggleNotificacoes()">
+                <span>🔔 Notificações</span>
+                <span class="notification-count" id="notifCount">0</span>
+            </div>
+            <div class="notification-dropdown" id="notificationDropdown" style="display: none;"></div>
+        </div>
+    </aside>
+    
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="main-content">
+        <div class="top-bar">
+            <button class="menu-toggle" id="menuToggle" onclick="toggleSidebar()">☰</button>
+            <button class="theme-toggle" onclick="toggleDarkMode()" title="Modo escuro/claro">🌙</button>
+        </div>
+        
+        <div class="content-area">
+            <div style="text-align: center; padding: 2rem 1rem;">
+                <h1 style="font-size: 2.5rem;">Bem-vindo ao Sport Match</h1>
+                <p style="color: #64748b; max-width: 600px; margin: 1rem auto;">
+                    Conectamos atletas e equipes de forma simples e eficiente. Encontre oportunidades para mostrar seu talento ou descubra novos jogadores para fortalecer sua equipe.
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem;">
+                    <a href="vagas.html" class="btn btn-primary">Ver Vagas</a>
+                    <a href="atletas.html" class="btn btn-secondary">Ver Atletas</a>
+                </div>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 3rem;">
+                <div class="card" style="text-align: center;">
+                    <div style="font-size: 2.5rem;">👥</div>
+                    <h3>Atletas</h3>
+                    <p>Encontre talentos esportivos de diversas modalidades</p>
+                    <a href="atletas.html" class="btn btn-primary" style="margin-top: 1rem;">Ver Atletas</a>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <div style="font-size: 2.5rem;">🏢</div>
+                    <h3>Equipes</h3>
+                    <p>Descubra clubes e grupos esportivos</p>
+                    <a href="equipes.html" class="btn btn-primary" style="margin-top: 1rem;">Ver Equipes</a>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <div style="font-size: 2.5rem;">📋</div>
+                    <h3>Vagas</h3>
+                    <p>Oportunidades para atletas de todos os níveis</p>
+                    <a href="vagas.html" class="btn btn-primary" style="margin-top: 1rem;">Ver Vagas</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="credit">Sport Match © 2024 - Conectando atletas e equipes</div>
+        </div>
+    </main>
+</div>
+
+<script src="../js/sessao.js"></script>
+<script src="../js/menu-lateral.js"></script>
+</body>
+</html>

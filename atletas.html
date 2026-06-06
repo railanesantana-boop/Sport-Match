@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atletas - Sport Match</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="app-container">
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo">
+                <img src="../assets/logo.jpeg" alt="Logosportmatch" style="height: 40px; width: auto;"> 
+                <span>SPORT MATCH</span>
+            </a>
+        </div>
+        <div class="sidebar-profile" id="sidebarProfile">
+            <div class="sidebar-avatar" id="sidebarAvatar">👤</div>
+            <h3 id="sidebarNome">Carregando...</h3>
+            <p id="sidebarEmail">...</p>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item">📊 Dashboard</a>
+            <a href="atletas.html" class="nav-item active">👥 Atletas</a>
+            <a href="equipes.html" class="nav-item">🏢 Equipes</a>
+            <a href="vagas.html" class="nav-item">📋 Vagas</a>
+            <a href="perfil_atleta.html" class="nav-item" id="perfilLink">✏️ Meu Perfil</a>
+            <a href="#" class="nav-item logout" onclick="logout(); return false;">🚪 Sair</a>
+        </nav>
+        <div class="sidebar-notifications">
+            <div class="notification-badge-sidebar" onclick="toggleNotificacoes()">
+                <span>🔔 Notificações</span>
+                <span class="notification-count" id="notifCount">0</span>
+            </div>
+        </div>
+    </aside>
+    
+    <main class="main-content">
+        <div class="top-bar">
+            <button class="menu-toggle" id="menuToggle" onclick="toggleSidebar()">☰</button>
+            <button class="theme-toggle" onclick="toggleDarkMode()">🌙</button>
+        </div>
+        
+        <div class="content-area">
+            <h1>Atletas disponíveis</h1>
+            
+            <div class="filtros">
+                <div class="filtros-left">
+                    <select id="filtroEsporte" class="filtro-select">
+                        <option value="todos">Todos os esportes</option>
+                        <option value="Futebol">Futebol</option>
+                        <option value="Basquete">Basquete</option>
+                        <option value="Vôlei">Vôlei</option>
+                        <option value="Natação">Natação</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="cards" id="listaAtletas"></div>
+        </div>
+        
+        <div class="footer">
+            <div class="credit">Sport Match © 2024 - Conectando atletas e equipes</div>
+        </div>
+    </main>
+</div>
+
+<script src="../js/sessao.js"></script>
+<script src="../js/modal.js"></script>
+<script src="../js/menu-lateral.js"></script>
+<script src="../js/atletas.js"></script>
+</body>
+</html>

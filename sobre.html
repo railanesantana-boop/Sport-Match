@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre - Sport Match</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="app-container">
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo">🏆 SPORT MATCH</a>
+        </div>
+        <div class="sidebar-profile" id="sidebarProfile">
+            <div class="sidebar-avatar" id="sidebarAvatar">👤</div>
+            <h3 id="sidebarNome">Carregando...</h3>
+            <p id="sidebarEmail">...</p>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item">📊 Dashboard</a>
+            <a href="atletas.html" class="nav-item">👥 Atletas</a>
+            <a href="equipes.html" class="nav-item">🏢 Equipes</a>
+            <a href="vagas.html" class="nav-item">📋 Vagas</a>
+            <a href="perfil_atleta.html" class="nav-item" id="perfilLink">✏️ Meu Perfil</a>
+            <a href="#" class="nav-item logout" onclick="logout(); return false;">🚪 Sair</a>
+        </nav>
+        <div class="sidebar-notifications">
+            <div class="notification-badge-sidebar" onclick="toggleNotificacoes()">
+                <span>🔔 Notificações</span>
+                <span class="notification-count" id="notifCount">0</span>
+            </div>
+        </div>
+    </aside>
+    
+    <main class="main-content">
+        <div class="top-bar">
+            <button class="menu-toggle" id="menuToggle" onclick="toggleSidebar()">☰</button>
+            <button class="theme-toggle" onclick="toggleDarkMode()">🌙</button>
+        </div>
+        
+        <div class="content-area">
+            <h1>Sobre o Sport Match</h1>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <div class="card">
+                    <div style="font-size: 2rem;">🏆</div>
+                    <h3>Nossa Missão</h3>
+                    <p>Conectar atletas e equipes de forma simples, rápida e profissional, democratizando o acesso ao esporte.</p>
+                </div>
+                <div class="card">
+                    <div style="font-size: 2rem;">🎯</div>
+                    <h3>Nossa Visão</h3>
+                    <p>Ser a maior plataforma de conexão esportiva da América Latina, reconhecida por transformar carreiras.</p>
+                </div>
+                <div class="card">
+                    <div style="font-size: 2rem;">💡</div>
+                    <h3>Nossos Valores</h3>
+                    <p>Transparência, inovação, inclusão e paixão pelo esporte.</p>
+                </div>
+            </div>
+            
+            <div class="card" style="margin-top: 2rem;">
+                <h3>Como Funciona?</h3>
+                <p>Atletas criam perfis com suas habilidades, conquistas e estatísticas. Equipes publicam vagas e encontram talentos. Tudo de forma simples e gratuita!</p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="credit">Sport Match © 2024 - Conectando atletas e equipes</div>
+        </div>
+    </main>
+</div>
+
+<script src="../js/sessao.js"></script>
+<script src="../js/menu-lateral.js"></script>
+</body>
+</html>
